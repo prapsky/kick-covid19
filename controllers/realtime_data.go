@@ -76,6 +76,7 @@ func DataByCountryandDate(w http.ResponseWriter, cc string, inputDateTime string
 	response.Timestamp = request.Snapshots[selectedIndex].Timestamp.Format("2006-01-02")
 	response.CountryName = request.CountryName
 	response.Cases = request.Snapshots[selectedIndex].Cases
+	response.Treatment = request.Snapshots[selectedIndex].Cases - request.Snapshots[selectedIndex].Deaths - request.Snapshots[selectedIndex].Recovered
 	response.Deaths = request.Snapshots[selectedIndex].Deaths
 	response.Recovered = request.Snapshots[selectedIndex].Recovered
 

@@ -25,6 +25,7 @@ type Response struct {
 	Timestamp   string `json:"timestamp"`
 	CountryName string `json:"country"`
 	Cases       int    `json:"cases"`
+	Treatment   int    `json:"treatment"`
 	Deaths      int    `json:"deaths"`
 	Recovered   int    `json:"recovered"`
 }
